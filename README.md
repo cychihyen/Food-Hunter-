@@ -13,7 +13,7 @@ JunJie Shen
 
 
 
-Commend to run the code:
+Commend to run the code: python alg.py
 
 
 The food hunter Web application asks the user to input ingredients and possibly ranking perference by the level of saltiness, sweetness, bitterness, sourness, or umami. Then, we using cosine similarity score between query + tasts factor to get the score of each recipe. Finally, output the recipes to the users based on scores.
