@@ -2,6 +2,7 @@ from __future__ import division
 from operator import itemgetter
 import json #or cjson
 import re
+import sys
 
 class Project(object): 
 
@@ -46,8 +47,7 @@ class Project(object):
             return 0
 
 if __name__ == '__main__':
-
-    query_list = []
+    query_list = ['beef','tomato']
 
     inputfile = 'database.json'
     f=open(inputfile, 'r')
