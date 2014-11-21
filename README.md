@@ -4,9 +4,13 @@ Food Hunter
 CSCE 470 group project - Food hunter
 
 Group Members:
-Chih-Yen Chang
+
+Chih-Yen Chang 
+
 Sidian Wu
+
 JunJie Shen
+
 
 commend to run the code:
 
