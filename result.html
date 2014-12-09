@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <title> Results </title>
+  <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" />
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  {% load staticfiles %}
+  <link rel="stylesheet" type="text/css" href="{% static "assets/css/display.css" %}" />
+    <!--style type="text/css">
+      div#container{width:1000px}
+      div#header {background-color:#EEEEEE;}
+      div#content{width: 1000px;height: 1200}
+      div#result1 {background-color:#EEEEEE; width:600px;height:150px;}
+      div#btn-group { display:inline;background-color:#EEEEEE; height:50px;}
+    </style-->
+  </head>
+  
+  <body>
+  <div class = "jumbotron">
+
+    <div id="header">
+      <h1>Result</h1>
+    </div>
+    
+    <div id="content">
+    <div class="col-md-offset-2" id="result1">
+      <table style="text-align:center">
+      <col width="350">
+      <col width="500">
+    {% for item in result %}
+        <tr>
+          <td height = "280"><img alt="self portrait" id = "image" src = {{item.imageUrlsBySize.90}} width = "320px" height = "250px"> </td>
+          <td style="font-family:sans-serif"> 
+            <a href="http://www.yummly.com/recipe/{{item.id}}">
+              <font size="6" color="maroon">{{item.recipeName}} 
+              </font> 
+            </a>
+            </p> 
+            <font size="5" color="white"> Ingredients:
+              {%for i in item.ingredients%}
+                  {{i}} &nbsp;
+                  {% endfor %}
+            </font>
+            </p>
+          </td>
+        </tr>
+    </div>
+    {% endfor %}
+     </table>
+    </div>
+    <br>
+    <center>
+      <div id="btn-group" role="group" >
+
+       <form action="/search/1/" style="display:inline">
+         <button type="submit" class="btn btn-default">1</button>
+       </form>
+
+       <form action="/search/2/" style="display:inline">
+         <button type="submit" class="btn btn-default">2</button>
+       </form>
+
+       <form action="/search/3/" style="display:inline">
+         <button type="submit" class="btn btn-default">3</button>
+       </form>
+
+       <form action="/search/4/" style="display:inline">
+         <button type="submit" class="btn btn-default">4</button>
+       </form>
+
+       <form action="/search/5/" style="display:inline">
+         <button type="submit" class="btn btn-default">5</button>
+       </form>
+
+       <form action="/search/6/" style="display:inline">
+         <button type="submit" class="btn btn-default">6</button>
+       </form>
+
+       <form action="/search/7/" style="display:inline">
+         <button type="submit" class="btn btn-default">7</button>
+       </form>
+      </div>
+    </div>
+    </center>
+  </div>
+  </body>
+</html>
