@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title> Food Hunter!</title>
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css" />
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        {% load staticfiles %}
+        <link rel="stylesheet" type="text/css" href="{% static "assets/css/food_hunter.css" %}" />
+        <script type="text/javascript" src="{% static "assets/js/food_hunter.js" %}"></script>
+    </head>
+
+    <body>
+   
+        <div class="jumbotron">
+            <br><br>
+            <h1>Food Hunter!</h1>
+            <br><br>
+            <center>
+                <div class="col-lg-4 col-md-offset-4">
+                    <div class="input-group" >
+                    <input type="text" class="form-control" placeholder="Enter your ingredient" id="input1" >
+                    <span class="input-group-btn">
+                    <button onclick = "myFunction()" id="add" type="button" class="btn btn-success" >Add ingredients</button>
+                    </span>
+                    </div><!-- /input-group -->
+                </div>
+                <br><br><br>
+
+            	<form action="/search/" method="get">
+                	<div id= "myDIV">
+                        <div  id="myList"></div>
+                	</div>
+               
+                	<div class="container">
+
+                    	<button id = "get_ingredients" class="btn btn-success" type="submit">Go :P</button>
+
+                	</div>
+            	</form>
+        	</center>
+        </div>
+
+    </body>
+</html>
